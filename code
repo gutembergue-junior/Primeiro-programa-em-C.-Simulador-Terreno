@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+
+int main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	float largura, comprimento, precoMetroQuadrado, areaTerreno, precoTerreno;
+	int opcao;
+	
+	printf("Prezado Cliente, obrigado por nos visitar!\n");
+	printf("Faça aqui a simulação do valor do seu terreno para venda:\n ");
+	
+	printf("\nDigite a largura do terreno: ");
+	scanf("%f", &largura);
+	printf("Digite o comprimento do terreno: ");
+	scanf("%f", &comprimento);
+	printf("Insira o valor do metro quadrado do terreno: ");
+	scanf("%f", &precoMetroQuadrado);
+	
+	areaTerreno = largura * comprimento;
+	precoTerreno = areaTerreno * precoMetroQuadrado;	
+	
+	printf("\nDetalhamento da Simulação:\n");
+	printf("\nLargura: %.2f metros.\n", largura);
+	printf("Comprimento: %.2f metros.\n", comprimento);
+	printf("Valor do metro quadrado do terreno R$%.2f.\n", precoMetroQuadrado);
+	printf("Área do terreno: %.2fm².\n", areaTerreno);
+	printf("Preço do terreno: R$%.2f.\n", precoTerreno);
+	
+	
+	printf("\nPara anunciar seu terreno conosco digite: 1. \nPara finalizar o programa digite 2:  ");
+	scanf("%d", &opcao);	
+	switch(opcao){
+		case 1:
+			printf("\n*** Excelente! ***\n\n Dirija-se à nossa imobiliária ou\n entre em contato com um dos nossos corretores.\n");
+			printf("\nEndereço: Rua Principal, 423, Centro, Nova Friburgo.\n");
+			printf("Contatos: (22)2222-2222 ou (22)99999-0000.\n");
+			printf("\nObrigado pela sua preferência!");
+			break;
+			
+		case 2:
+			printf("\n\nOk então!\n Obrigado por nos visitar.\n");
+			printf(" Estamos a sua disposição para um contato futuro.");
+			break;			
+	}	
+	
+}
